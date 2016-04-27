@@ -1,0 +1,109 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/Users/jestersimpps/.meteor/packages/meteor-tool/.1.3.2_4.lbyo5v++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'angular2/bootstrap' ]
+2 info using npm@2.14.22
+3 info using node@v0.10.43
+4 verbose install initial load of /Users/jestersimpps/Sites/clients_projects/meteor_mailwall/package.json
+5 verbose installManyTop reading scoped package data from /Users/jestersimpps/Sites/clients_projects/meteor_mailwall/node_modules/angular2/package.json
+6 verbose installManyTop reading scoped package data from /Users/jestersimpps/Sites/clients_projects/meteor_mailwall/node_modules/angular2-meteor/package.json
+7 verbose installManyTop reading scoped package data from /Users/jestersimpps/Sites/clients_projects/meteor_mailwall/node_modules/angular2-meteor-auto-bootstrap/package.json
+8 verbose installManyTop reading scoped package data from /Users/jestersimpps/Sites/clients_projects/meteor_mailwall/node_modules/es6-shim/package.json
+9 verbose installManyTop reading scoped package data from /Users/jestersimpps/Sites/clients_projects/meteor_mailwall/node_modules/meteor-node-stubs/package.json
+10 verbose installManyTop reading scoped package data from /Users/jestersimpps/Sites/clients_projects/meteor_mailwall/node_modules/reflect-metadata/package.json
+11 verbose installManyTop reading scoped package data from /Users/jestersimpps/Sites/clients_projects/meteor_mailwall/node_modules/rxjs/package.json
+12 verbose installManyTop reading scoped package data from /Users/jestersimpps/Sites/clients_projects/meteor_mailwall/node_modules/zone.js/package.json
+13 info package.json angular2-meteor-auto-bootstrap@0.5.2 No repository field.
+14 verbose readDependencies loading dependencies from /Users/jestersimpps/Sites/clients_projects/meteor_mailwall/package.json
+15 silly cache add args [ 'angular2/bootstrap', null ]
+16 verbose cache add spec angular2/bootstrap
+17 silly cache add parsed spec { raw: 'angular2/bootstrap',
+17 silly cache add   scope: null,
+17 silly cache add   name: null,
+17 silly cache add   rawSpec: 'angular2/bootstrap',
+17 silly cache add   spec: 'github:angular2/bootstrap',
+17 silly cache add   type: 'hosted',
+17 silly cache add   hosted:
+17 silly cache add    { type: 'github',
+17 silly cache add      ssh: 'git@github.com:angular2/bootstrap.git',
+17 silly cache add      sshUrl: 'git+ssh://git@github.com/angular2/bootstrap.git',
+17 silly cache add      httpsUrl: 'git+https://github.com/angular2/bootstrap.git',
+17 silly cache add      gitUrl: 'git://github.com/angular2/bootstrap.git',
+17 silly cache add      shortcut: 'github:angular2/bootstrap',
+17 silly cache add      directUrl: 'https://raw.githubusercontent.com/angular2/bootstrap/master/package.json' } }
+18 verbose addRemoteGit caching angular2/bootstrap
+19 verbose addRemoteGit angular2/bootstrap is a repository hosted by github
+20 silly tryGitProto attempting to clone git://github.com/angular2/bootstrap.git
+21 silly tryClone cloning angular2/bootstrap via git://github.com/angular2/bootstrap.git
+22 verbose tryClone git-github-com-angular2-bootstrap-git-cca15571 not in flight; caching
+23 verbose correctMkdir /Users/jestersimpps/.npm/_git-remotes correctMkdir not in flight; initializing
+24 verbose makeDirectory /Users/jestersimpps/.npm/_git-remotes creation not in flight; initializing
+25 silly makeDirectory /Users/jestersimpps/.npm/_git-remotes uid: 501 gid: 20
+26 info git [ 'clone',
+26 info git   '--template=/Users/jestersimpps/.npm/_git-remotes/_templates',
+26 info git   '--mirror',
+26 info git   'git://github.com/angular2/bootstrap.git',
+26 info git   '/Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-cca15571' ]
+27 verbose git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror git://github.com/angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-cca15571: Cloning into bare repository '/Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-cca15571'...
+27 verbose git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror git://github.com/angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-cca15571: fatal: remote error:
+27 verbose git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror git://github.com/angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-cca15571:   Repository not found.
+28 silly tryHTTPS attempting to clone git+https://github.com/angular2/bootstrap.git
+29 silly tryClone cloning angular2/bootstrap via git+https://github.com/angular2/bootstrap.git
+30 verbose tryClone https-github-com-angular2-bootstrap-git-743671d2 not in flight; caching
+31 verbose correctMkdir /Users/jestersimpps/.npm/_git-remotes correctMkdir not in flight; initializing
+32 info git [ 'clone',
+32 info git   '--template=/Users/jestersimpps/.npm/_git-remotes/_templates',
+32 info git   '--mirror',
+32 info git   'https://github.com/angular2/bootstrap.git',
+32 info git   '/Users/jestersimpps/.npm/_git-remotes/https-github-com-angular2-bootstrap-git-743671d2' ]
+33 verbose git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror https://github.com/angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/https-github-com-angular2-bootstrap-git-743671d2: Cloning into bare repository '/Users/jestersimpps/.npm/_git-remotes/https-github-com-angular2-bootstrap-git-743671d2'...
+33 verbose git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror https://github.com/angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/https-github-com-angular2-bootstrap-git-743671d2: remote: Invalid username or password.
+33 verbose git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror https://github.com/angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/https-github-com-angular2-bootstrap-git-743671d2: fatal: Authentication failed for 'https://github.com/angular2/bootstrap.git/'
+34 silly trySSH attempting to clone git@github.com:angular2/bootstrap.git
+35 silly tryClone cloning angular2/bootstrap via git@github.com:angular2/bootstrap.git
+36 verbose tryClone git-github-com-angular2-bootstrap-git-9ba76e9f not in flight; caching
+37 verbose correctMkdir /Users/jestersimpps/.npm/_git-remotes correctMkdir not in flight; initializing
+38 info git [ 'clone',
+38 info git   '--template=/Users/jestersimpps/.npm/_git-remotes/_templates',
+38 info git   '--mirror',
+38 info git   'git@github.com:angular2/bootstrap.git',
+38 info git   '/Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-9ba76e9f' ]
+39 error git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror git@github.com:angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-9ba76e9f: Cloning into bare repository '/Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-9ba76e9f'...
+39 error git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror git@github.com:angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-9ba76e9f: Warning: Permanently added the RSA host key for IP address '192.30.252.129' to the list of known hosts.
+39 error git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror git@github.com:angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-9ba76e9f: Permission denied (publickey).
+39 error git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror git@github.com:angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-9ba76e9f: fatal: Could not read from remote repository.
+39 error git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror git@github.com:angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-9ba76e9f:
+39 error git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror git@github.com:angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-9ba76e9f: Please make sure you have the correct access rights
+39 error git clone --template=/Users/jestersimpps/.npm/_git-remotes/_templates --mirror git@github.com:angular2/bootstrap.git /Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-9ba76e9f: and the repository exists.
+40 verbose stack Error: Command failed: Cloning into bare repository '/Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-9ba76e9f'...
+40 verbose stack Warning: Permanently added the RSA host key for IP address '192.30.252.129' to the list of known hosts.
+40 verbose stack Permission denied (publickey).
+40 verbose stack fatal: Could not read from remote repository.
+40 verbose stack
+40 verbose stack Please make sure you have the correct access rights
+40 verbose stack and the repository exists.
+40 verbose stack
+40 verbose stack     at ChildProcess.exithandler (child_process.js:658:15)
+40 verbose stack     at ChildProcess.emit (events.js:98:17)
+40 verbose stack     at maybeClose (child_process.js:766:16)
+40 verbose stack     at Socket.<anonymous> (child_process.js:979:11)
+40 verbose stack     at Socket.emit (events.js:95:17)
+40 verbose stack     at Pipe.close (net.js:466:12)
+41 verbose cwd /Users/jestersimpps/Sites/clients_projects/meteor_mailwall
+42 error Darwin 15.4.0
+43 error argv "node" "/Users/jestersimpps/.meteor/packages/meteor-tool/.1.3.2_4.lbyo5v++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/bin/npm" "install" "--save" "angular2/bootstrap"
+44 error node v0.10.43
+45 error npm  v2.14.22
+46 error code 128
+47 error Command failed: Cloning into bare repository '/Users/jestersimpps/.npm/_git-remotes/git-github-com-angular2-bootstrap-git-9ba76e9f'...
+47 error Warning: Permanently added the RSA host key for IP address '192.30.252.129' to the list of known hosts.
+47 error Permission denied (publickey).
+47 error fatal: Could not read from remote repository.
+47 error
+47 error Please make sure you have the correct access rights
+47 error and the repository exists.
+48 error If you need help, you may report this error at:
+48 error     <https://github.com/npm/npm/issues>
+49 verbose exit [ 1, true ]

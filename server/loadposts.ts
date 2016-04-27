@@ -1,6 +1,10 @@
-Meteor.startup(() => {
+import {Posts} from '../collections/posts.ts';
+
+export function loadPosts() {
   if (Posts.find().count() === 0) {
-    const p = [{
+
+
+    var posts = [{
       "body": "\n\n",
       "comments": 0,
       "created_at": "2016-04-25 14:57:46",
@@ -208,8 +212,9 @@ Meteor.startup(() => {
       }
     }];
 
-    p.forEach((post) => {
-      Posts.insert(post)
-    });
+
+    for (var i = 0; i < posts.length; i++) {
+      Posts.insert(posts[i]);
+    }
   }
-});
+};
