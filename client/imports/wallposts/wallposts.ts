@@ -10,12 +10,31 @@ let name = 'wallposts';
 @Component({
     selector: name,
     templateUrl: `/client/imports/${name}/${name}.html`,
-    directives:[youtubecard,articlecard]
+    directives: [youtubecard, articlecard]
 })
 
 export class wallposts {
     posts: Mongo.Cursor<Object>;
+
     constructor() {
         this.posts = Posts.find();
+    }
+
+    popShare(post) {
+        console.log('cloning');
+        delete post['_id'];
+        Posts.insert(post);
+    }
+    popRemove(post) {
+        console.log('removing')
+        Posts.remove(post._id);
+    }
+    popLike(post) {
+        console.log('upvote');
+        Posts.update({ _id: post._id }, { upvotes: post.upvotes + 1 });
+    }
+    popDislike(post) {
+        console.log('downvote');
+        Posts.update({ _id: post._id }, { downvotes: post.downvotes + 1 });
     }
 }

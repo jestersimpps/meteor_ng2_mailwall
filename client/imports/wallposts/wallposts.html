@@ -12,17 +12,17 @@
     </div>
 
     <div class="brickheader" [ngClass]="{'red darken-3': post.site_name == 'YouTube', 'green darken-1': post.site_name == 'img' , 'blue  darken-2': post.site_name != 'YouTube' && post.site_name != 'img'}">
-        <button *ngIf="post.public == 1" class="makeprivate white black-text">
+        <button *ngIf="post.public == 1" class="makeprivate white black-text" (click)="makePrivate(post)">
       <i class="fa fa-unlock"></i>
     </button>
-        <button *ngIf="post.public == 0" class="makepublic white black-text">
+        <button *ngIf="post.public == 0" class="makepublic white black-text" (click)="makePublic(post)">
       <i class="fa fa-lock"></i>
     </button>
 
-        <button class="sharepost white blue-text" (click)="popshare(post._id)">
+        <button class="sharepost white blue-text" (click)="popShare(post)">
       <i class="fa fa-code-fork"></i>
     </button>
-        <button class="removepost white red-text pull-right" (click)="popremove(post._id)">
+        <button class="removepost white red-text pull-right" (click)="popRemove(post)">
       <i class="fa fa-trash-o"></i>
     </button>
     </div>
@@ -38,13 +38,13 @@
 
 
     <div class="brickfooter" [ngClass]="{'red darken-3': post.site_name == 'YouTube', 'green darken-1': post.site_name == 'img' , 'blue  darken-2': post.site_name != 'YouTube' && post.site_name != 'img'}">
-        <button class="downvotes white red-text" (click)="popdislikes(post._id)">{{post.downvotes}}
+        <button class="downvotes white red-text" (click)="popDislike(post)">{{post.downvotes}}
       <i class="fa fa-thumbs-o-down"></i>
     </button>
-        <button class="upvotes white green-text" (click)="poplikes(post._id)">{{post.upvotes}}
+        <button class="upvotes white green-text" (click)="popLike(post)">{{post.upvotes}}
       <i class="fa fa-thumbs-o-up"></i>
     </button>
-        <button class="commentsbutton white pull-right black-text" (click)="popcomments(post._id)">
+        <button class="commentsbutton white pull-right black-text" (click)="showComments(post._id)">
       <i class="fa fa-comments-o"></i>
       {{post.comments}} Comments
     </button>
