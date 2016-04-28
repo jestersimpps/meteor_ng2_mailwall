@@ -30,8 +30,10 @@
 
 
 
-    <articlecard [post]="post" *ngIf="post.site_name != 'YouTube' && post.site_name != 'img'"></articlecard>
+    
     <youtubecard [post]="post" *ngIf="post.site_name == 'YouTube'"></youtubecard>
+    <imagecard [post]="post" *ngIf="post.site_name == 'img'"></imagecard>
+    <articlecard [post]="post" *ngIf="post.site_name != 'YouTube' && post.site_name != 'img'"></articlecard>
 
 
 

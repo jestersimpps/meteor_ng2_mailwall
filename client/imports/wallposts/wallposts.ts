@@ -4,13 +4,14 @@ import {Component} from 'angular2/core';
 import {Posts} from '../../../collections/posts';
 import {articlecard} from '../../imports/cards/articlecard/articlecard';
 import {youtubecard} from '../../imports/cards/youtubecard/youtubecard';
+import {imagecard} from '../../imports/cards/imagecard/imagecard';
 
 let name = 'wallposts';
 
 @Component({
     selector: name,
     templateUrl: `/client/imports/${name}/${name}.html`,
-    directives: [youtubecard, articlecard]
+    directives: [youtubecard, articlecard, imagecard]
 })
 
 export class wallposts {
@@ -21,20 +22,20 @@ export class wallposts {
     }
 
     popShare(post) {
-        console.log('cloning');
+        console.log('cloning ' + post._id);
         delete post['_id'];
         Posts.insert(post);
     }
     popRemove(post) {
-        console.log('removing')
+        console.log('removing ' + post._id)
         Posts.remove(post._id);
     }
     popLike(post) {
-        console.log('upvote');
-        Posts.update({ _id: post._id }, { upvotes: post.upvotes + 1 });
+        console.log('upvote ' + post._id);
+        Posts.update({ _id: post._id }, { $set: { upvotes: post.upvotes + 1 } })
     }
     popDislike(post) {
-        console.log('downvote');
-        Posts.update({ _id: post._id }, { downvotes: post.downvotes + 1 });
+        console.log('downvote ' + post._id);
+        Posts.update({ _id: post._id }, { $set: { downvotes: post.downvotes + 1 } });
     }
 }

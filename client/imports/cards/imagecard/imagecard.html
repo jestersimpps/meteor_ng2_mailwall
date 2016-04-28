@@ -1,0 +1,28 @@
+<!-- image -->
+
+<div class="topinfo">
+  <h3>{{post.subject}}</h3>
+</div>
+
+<!--carousel-->
+<div [id]="'carousel-'+post._id" class="carousel slide" [hidden]="post.url.length <= 1">
+  <div class="carousel-inner ">
+    <a magnific-image [href]="img" class="item " [class]="{'active':img == post.url[0]}" *ngFor="#img of post.url">
+      <img [src]="img">
+    </a>
+  </div>
+
+  <a class="carousel-control left" [href]="'#carousel-'+post._id" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" [href]="'#carousel'+post._id" data-slide="next">&rsaquo;</a>
+</div>
+
+<!--single image-->
+<div [hidden]="post.url.length > 1">
+  <a magnific-image class=" image" [href]="post.url[0]" style="height:50px;">
+    <img [src]="post.url[0]" class="image img-responsive">
+  </a>
+</div>
+
+
+<div *ngIf="post.body.replace('\n','').length > 1" class="body" [innerHTML]="post.body | n2br">
+</div>
