@@ -36,7 +36,7 @@ export class youtubecard {
                 a.setAttribute("src", "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1");
                 a.style.width = this.style.width;
                 a.style.height = this.style.height;
-                a.setAttribute("frameborder", 0);
+                a.setAttribute("frameborder", '0');
                 a.setAttribute("allowfullscreen", "");
                 this.parentNode.replaceChild(a, this)
             }

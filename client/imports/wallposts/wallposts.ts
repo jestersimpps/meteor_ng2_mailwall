@@ -38,4 +38,12 @@ export class wallposts {
         console.log('downvote ' + post._id);
         Posts.update({ _id: post._id }, { $set: { downvotes: post.downvotes + 1 } });
     }
+    makePublic(post) {
+        console.log('makepublic ' + post._id);
+        Posts.update({ _id: post._id }, { $set: { public: 1 } });
+    }
+    makePrivate(post) {
+        console.log('makeprivate ' + post._id);
+        Posts.update({ _id: post._id }, { $set: { public: 0 } });
+    }
 }

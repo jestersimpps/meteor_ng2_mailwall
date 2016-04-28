@@ -1,7 +1,7 @@
 <!-- youtube -->
 
 <div class="topinfo">
-  <h3>
+  <h3 class="black-text">
     <a target="_blank" [href]="post.url">{{ post.title }}</a>
   </h3>
 </div>
@@ -11,7 +11,7 @@
 <div class="subject">
   {{ post.subject }}
 </div>
-<div *ngIf="post.description != 0" class="body black-text">
+<div *ngIf="post.description != 0" class="description black-text">
   {{ post.description }}
   <p class="text-center" style="margin-top:10px;">
     <a class="btn btn-xs btn-default" data-toggle="collapse" [href]="'#collapse-'+post._id" aria-expanded="false" >

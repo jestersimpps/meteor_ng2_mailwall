@@ -1,0 +1,19 @@
+<div [id]="'carousel-'+identifier" class="carousel slide">
+
+    <div class="carousel-inner ">
+        <a [href]="url" class="item" [class]="{'active':url == images[0]}" *ngFor="#url of images">
+            <img [src]="url">
+        </a>
+    </div>
+
+
+    <a class="left carousel-control" [href]="'#carousel'+identifier" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" [href]="'#carousel'+identifier" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    
+</div>
