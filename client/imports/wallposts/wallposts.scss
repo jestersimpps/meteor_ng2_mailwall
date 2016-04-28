@@ -1,0 +1,175 @@
+.brick {
+  margin-bottom: 35px;
+  border-radius: 3px;
+  -moz-animation-name: pop;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-duration: 1.5s;
+  -webkit-animation-name: pop;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1.5s;
+  animation-name: pop;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.5s;
+}
+.brick .img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+.brick h3,
+.brick h5 {
+  text-shadow: none;
+}
+@-moz-keyframes pop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes pop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.commentbox {
+  margin-bottom: 2px;
+  max-width: 100%;
+}
+.typeindicator {
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+  padding: 5px;
+}
+.brickfooter {
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  padding: 5px;
+}
+.popover {
+  border: 2px solid RGBA(34, 34, 34, 1);
+}
+.commentsbutton {
+  cursor: pointer;
+  font-size: 0.7em;
+  border-radius: 20px;
+  border: 0;
+}
+.commentsbutton:hover {
+  font-size: 0.75em;
+}
+.date {
+  font-size: 0.7em;
+  padding: 5px;
+  border-radius: 2px;
+}
+.from_mail {
+  font-size: 0.7em;
+  left: 5px;
+  top: 5px;
+}
+.brick img {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+}
+.brickheader {
+  padding: 5px;
+  width: 100%;
+  font-size: 0.9em;
+}
+.downvotes {
+  font-size: 0.7em;
+  border-radius: 20px;
+  border: 0;
+}
+.downvotes:hover {
+  font-size: 0.8em;
+}
+.upvotes {
+  font-size: 0.7em;
+  border-radius: 20px;
+  border: 0;
+}
+.upvotes:hover {
+  font-size: 0.8em;
+}
+.makepublic {
+  border-radius: 20px;
+  border: 0;
+}
+.makepublic:hover {
+  font-size: 1.1em;
+}
+.makeprivate {
+  border-radius: 20px;
+  border: 0;
+}
+.makeprivate:hover {
+  font-size: 1.1em;
+}
+.sharepost {
+  border-radius: 20px;
+  border: 0;
+}
+.sharepost:hover {
+  font-size: 1.1em;
+}
+.removepost {
+  border-radius: 20px;
+  border: 0;
+}
+.removepost:hover {
+  font-size: 1.1em;
+}
+.comments {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+}
+.carousel-inner > .item > img {
+  height: 285px;
+  width: auto;
+  margin: auto;
+}
+[class*="-share"] {
+  cursor: pointer;
+  margin: 20px 0;
+  line-height: 30px;
+  padding-left: 30px;
+}
+// for individual card htmls
+.topinfo {
+  margin-top: 35px;
+  padding: 15px 15px 3px;
+  font-weight: bold;
+}
+.body {
+  padding: 3px 15px 5px;
+  font-size: 0.8em;
+  font-style: italic;
+}
+.subject {
+  padding: 5px 15px;
+  font-size: 1em;
+}

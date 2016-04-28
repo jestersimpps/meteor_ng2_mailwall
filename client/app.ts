@@ -12,7 +12,10 @@ import {navbar} from './imports/navbar/navbar';
 })
 class Mailwall {
   constructor() {
-    console.log('App Start')
+    console.log('App Start');
+  }
+  ngAfterViewInit(){
+    console.log('View init');
   }
 }
 

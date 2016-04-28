@@ -14,7 +14,7 @@
 
         <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
 
-            <ul class="nav navbar-nav navbar-right" ng-if="!user">
+            <ul class="nav navbar-nav navbar-right" *ngIf="!user">
                 <li>
                     <a class="white-text" href="/">Register</a>
                 </li>
@@ -23,7 +23,7 @@
                 </li>
             </ul>
 
-            <ul class="nav navbar-nav" ng-if="user">
+            <ul class="nav navbar-nav" *ngIf="user">
                 <li class="">
                     <a href="/">
                         <i class="fa fa-users"></i> Public
@@ -37,7 +37,7 @@
                 </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right" ng-if="user">
+            <ul class="nav navbar-nav navbar-right" *ngIf="user">
                 <li>
                     <a href="mailto:@mailwall.me">
                         <i class="fa fa-user"></i>

@@ -1,0 +1,26 @@
+<!-- article -->
+
+<div class="topinfo">
+  <h3>
+    <a target="_blank" [href]="post.url">{{ post.title }}</a>
+  </h3>
+</div>
+
+<a target="_blank" [href]="post.url" class="text-center">
+  <img [src]="post.img[0]" >
+</a>
+
+<div class="subject">
+  {{ post.subject }}
+</div>
+
+<div *ngIf="post.description != 0" class="body black-text">
+  {{ post.description }}
+  <p class="text-center" style="margin-top:10px;">
+    <a class="btn btn-sm btn-default" data-toggle="collapse" [href]="'#collapse-' + post._id" aria-expanded="false">
+      Read more...
+    </a>
+  </p>
+</div>
+
+<div [id]="'collapse-'+post._id" class="body collapse black-text" [innerHTML]="post.body"></div>

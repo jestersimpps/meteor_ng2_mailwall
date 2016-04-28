@@ -1,8 +1,12 @@
 import 'reflect-metadata';
 import {Component} from 'angular2/core';
 
+let name = 'navbar';
+
 @Component({
-    selector: 'navbar',
-    templateUrl: '/client/imports/navbar/navbar.html'
+    selector: name,
+    templateUrl: `/client/imports/${name}/${name}.html`
 })
+
+
 export class navbar {}
