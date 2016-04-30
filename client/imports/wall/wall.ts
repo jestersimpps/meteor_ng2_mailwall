@@ -19,16 +19,19 @@ export class wall {
 
     }
     ngAfterViewInit() {
-        var wall = new freewall("#wall");
-        wall.reset({
-            selector: '.brick',
-            animate: true,
-            cellW: 300,
-            cellH: 'auto',
-            onResize: function () {
-                wall.fitWidth();
-            }
-        });
-        wall.fitWidth();
+        setTimeout(function () {
+            //TODO: this should be done better, maybe a global function?
+            var wall = new freewall("#wall");
+            wall.reset({
+                selector: '.brick',
+                animate: true,
+                cellW: 300,
+                cellH: 'auto',
+                onResize: function () {
+                    wall.fitWidth();
+                }
+            });
+            wall.fitWidth();
+        }, 200);
     }
 }

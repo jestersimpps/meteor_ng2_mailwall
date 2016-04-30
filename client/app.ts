@@ -9,7 +9,6 @@ import {login} from './imports/auth/login/login';
 import {register} from './imports/auth/register/register';
 
 
-
 @Component({
   selector: 'app',
   templateUrl: '/client/app.html',

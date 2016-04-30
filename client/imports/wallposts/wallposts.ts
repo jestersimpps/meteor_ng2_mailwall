@@ -6,6 +6,7 @@ import {articlecard} from '../../imports/cards/articlecard/articlecard';
 import {youtubecard} from '../../imports/cards/youtubecard/youtubecard';
 import {imagecard} from '../../imports/cards/imagecard/imagecard';
 
+declare var freewall: any;
 let name = 'wallposts';
 
 @Component({
@@ -17,9 +18,45 @@ let name = 'wallposts';
 export class wallposts {
     posts: Mongo.Cursor<Object>;
 
+
     constructor() {
         this.posts = Posts.find();
-        
+        this.posts.observeChanges({
+            added: function (newDoc) {
+                setTimeout(function () {
+                    //TODO: this should be done better, maybe a global function?
+                    var wall = new freewall("#wall");
+                    wall.reset({
+                        selector: '.brick',
+                        animate: true,
+                        cellW: 300,
+                        cellH: 'auto',
+                        onResize: function () {
+                            wall.fitWidth();
+                        }
+                    });
+                    wall.fitWidth();
+                }, 200);
+            },
+            changed: function (newDoc, oldDoc) {
+            },
+            removed: function (oldDoc) {
+                setTimeout(function () {
+                    //TODO: this should be done better, maybe a global function?
+                    var wall = new freewall("#wall");
+                    wall.reset({
+                        selector: '.brick',
+                        animate: true,
+                        cellW: 300,
+                        cellH: 'auto',
+                        onResize: function () {
+                            wall.fitWidth();
+                        }
+                    });
+                    wall.fitWidth();
+                }, 200);
+            }
+        });
     }
 
     popShare(post) {
@@ -30,6 +67,7 @@ export class wallposts {
     }
     popRemove(post) {
         Posts.remove(post._id);
+
     }
     popLike(post) {
         Posts.update({ _id: post._id }, { $set: { upvotes: post.upvotes + 1 } })
@@ -43,4 +81,7 @@ export class wallposts {
     makePrivate(post) {
         Posts.update({ _id: post._id }, { $set: { public: 0 } });
     }
+
+
+
 }
