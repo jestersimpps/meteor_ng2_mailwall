@@ -18,10 +18,10 @@
 
             <ul class="nav navbar-nav navbar-right" *ngIf="!user">
                 <li>
-                    <a class="white-text" href="/">Register</a>
+                    <a class="white-text" [routerLink]="['Register']">Register</a>
                 </li>
                 <li>
-                    <a class="white-text" href="/">Login</a>
+                    <a class="white-text" [routerLink]="['Login']">Login</a>
                 </li>
             </ul>
 

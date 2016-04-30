@@ -1,4 +1,8 @@
 
+//auth
+@import "../imports/auth/auth.scss";
+
+
 // navbar
 @import "../imports/navbar/navbar.scss";
 
@@ -11,3 +15,6 @@
 // cards
 @import "../imports/cards/articlecard/articlecard.scss";
 @import "../imports/cards/youtubecard/youtubecard.scss";
+
+//carousel
+@import "../imports/carousel/carousel.scss";

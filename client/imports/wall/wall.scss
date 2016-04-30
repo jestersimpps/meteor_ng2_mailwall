@@ -69,25 +69,13 @@
   display: block;
 }
 .full-width.brick {
-  box-shadow: none;
   overflow: visible;
   border: none !important;
   background: none !important;
 }
 .full-width.brick .cover {
   margin: 0 20px;
-  color: #333;
 }
 .full-width.brick .cover * {
   text-shadow: none;
-}
-.full-width.brick .cover code {
-  color: #666;
-}
-.cell {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  background-color: #222;
 }
