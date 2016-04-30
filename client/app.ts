@@ -8,7 +8,7 @@ import {wall} from './imports/wall/wall';
 import {login} from './imports/auth/login/login';
 import {register} from './imports/auth/register/register';
 
-declare var freewall: any;
+
 
 @Component({
   selector: 'app',
@@ -22,12 +22,8 @@ declare var freewall: any;
   { path: '/private', as: 'Private', component: wall }
 ])
 class Mailwall {
-  constructor() {
-    console.log('App Start');
-  }
-  ngAfterViewInit() {
-    console.log('View init');
-  }
+  constructor() {}
+
 }
 
 bootstrap(Mailwall,

@@ -21,3 +21,4 @@ seba:minifiers-autoprefixer
 fourseven:scss
 mizzao:bootstrap-3
 angular2-compilers
+hb5:meteor-freewall
