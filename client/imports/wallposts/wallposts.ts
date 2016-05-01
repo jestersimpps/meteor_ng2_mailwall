@@ -20,7 +20,7 @@ export class wallposts {
 
 
     constructor() {
-        this.posts = Posts.find();
+        this.posts = Posts.find({}, { sort: { sorter: 1 } });
         this.posts.observeChanges({
             added: function (newDoc) {
                 setTimeout(function () {
@@ -66,7 +66,7 @@ export class wallposts {
         Posts.insert(copy);
     }
     popRemove(post) {
-          Posts.remove(post._id);
+        Posts.remove(post._id);
     }
     popLike(post) {
         Posts.update({ _id: post._id }, { $set: { upvotes: post.upvotes + 1 } })
