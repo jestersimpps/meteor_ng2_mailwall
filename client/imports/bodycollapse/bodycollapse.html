@@ -1,0 +1,8 @@
+<p class="text-center" style="margin-top:10px;">
+    <a class="btn btn-sm btn-default" (click)="collapse()">
+      <span [hidden]="!collapsed">Read more <i class="fa fa-angle-down"></i></span>
+      <span [hidden]="collapsed">Read less <i class="fa fa-angle-up"></i></span>
+    </a>
+</p>
+
+<div class="body black-text" [innerHTML]="htmlbody | n2br" [hidden]="collapsed"></div>

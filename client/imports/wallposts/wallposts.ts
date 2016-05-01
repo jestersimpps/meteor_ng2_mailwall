@@ -60,14 +60,13 @@ export class wallposts {
     }
 
     popShare(post) {
-        //currently makes a copy of a post
+        // makes a copy of a post
         let copy = Object.assign({}, post)
         delete copy['_id'];
         Posts.insert(copy);
     }
     popRemove(post) {
-        Posts.remove(post._id);
-
+          Posts.remove(post._id);
     }
     popLike(post) {
         Posts.update({ _id: post._id }, { $set: { upvotes: post.upvotes + 1 } })

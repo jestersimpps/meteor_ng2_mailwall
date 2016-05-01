@@ -16,11 +16,6 @@
 
 <div *ngIf="post.description != 0" class="description black-text">
   {{ post.description }}
-  <p class="text-center" style="margin-top:10px;">
-    <a class="btn btn-sm btn-default" data-toggle="collapse" [href]="'#collapse-' + post._id" aria-expanded="false" (click)="refreshWall()">
-      Read more...
-    </a>
-  </p>
 </div>
 
-<div [id]="'collapse-'+post._id" class="body collapse black-text" [innerHTML]="post.body | n2br"></div>
+<bodycollapse [htmlbody]="post.body"></bodycollapse>

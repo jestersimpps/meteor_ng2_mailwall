@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import {Component, Input} from 'angular2/core';
-import {n2br} from '../../../imports/pipes/n2br';
+import {bodycollapse} from '../../../imports/bodycollapse/bodycollapse';
 
 let name = 'youtubecard';
 
@@ -8,7 +8,7 @@ let name = 'youtubecard';
     selector: name,
     templateUrl: `/client/imports/cards/${name}/${name}.html`,
     inputs: ['post'],
-    pipes: [n2br]
+    directives: [bodycollapse]
 })
 
 
