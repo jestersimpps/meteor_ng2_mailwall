@@ -20,10 +20,10 @@
     </button>
 
     <button class="sharepost white blue-text" (click)="popShare(post)">
-      <i class="fa fa-code-fork"></i>
+      <i class="fa fa-share-alt"></i>
     </button>
     <button class="removepost white red-text pull-right" (click)="popRemove(post)">
-      <i class="fa fa-trash-o"></i>
+      <i class="fa fa-trash"></i>
     </button>
   </div>
 
@@ -39,13 +39,13 @@
 
   <div class="brickfooter" [ngClass]="{'red darken-3': post.site_name == 'YouTube', 'green darken-1': post.site_name == 'img' , 'blue  darken-2': post.site_name != 'YouTube' && post.site_name != 'img'}">
     <button class="downvotes white red-text" (click)="popDislike(post)">{{post.downvotes}}
-      <i class="fa fa-thumbs-o-down"></i>
+      <i class="fa fa-thumbs-down"></i>
     </button>
     <button class="upvotes white green-text" (click)="popLike(post)">{{post.upvotes}}
-      <i class="fa fa-thumbs-o-up"></i>
+      <i class="fa fa-thumbs-up"></i>
     </button>
     <button class="commentsbutton white pull-right black-text" (click)="showComments(post._id)">
-      <i class="fa fa-comments-o"></i>
+      <i class="fa fa-comments"></i>
       {{post.comments}} Comments
     </button>
   </div>
