@@ -16,8 +16,8 @@ let name = 'wallposts';
 })
 
 export class wallposts {
+    
     posts: Mongo.Cursor<Object>;
-
 
     constructor() {
         

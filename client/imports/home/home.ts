@@ -1,22 +1,22 @@
 import 'reflect-metadata';
 import {Component} from 'angular2/core';
 import {RouterLink} from 'angular2/router';
-import {MeteorComponent} from 'angular2-meteor/build/meteor_component';
+import {navbar} from '../../imports/navbar/navbar';
 
-let name = 'navbar';
+let name = 'home';
+
 
 @Component({
     selector: name,
     templateUrl: `/client/imports/${name}/${name}.html`,
-    directives: [RouterLink]
+    directives: [RouterLink, navbar]
 })
 
-
-export class navbar {
-    
-    user: Meteor.User;
-
+export class home {
     constructor() {
-        console.log(this.user);
+
+    }
+    ngAfterViewInit() {
+      
     }
 }
