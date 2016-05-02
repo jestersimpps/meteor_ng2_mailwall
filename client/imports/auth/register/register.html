@@ -1,5 +1,5 @@
 <div class="form-box">
-    <form class="" action="" method="post">
+    <form [ngFormModel]="signupForm" #f="ngForm" (submit)="signup(f.value)">
 
 
         <div class="header dev">
@@ -8,9 +8,10 @@
             </center>
         </div>
         <div class="body">
-            <ul>
-                <li class="red-text">error</li>
+            <ul [hidden]="error == ''">
+                <li class="red-text">{{ error }}</li>
             </ul>
+
 
             <div class="form-group">
                 <label>Activation token: </label>
@@ -19,7 +20,7 @@
 
             <label>Desired mailwall.me address:</label>
             <div class="input-group">
-                <input type="text" class="form-control" name="name" value="" placeholder="Username">
+                <input type="text" class="form-control" ngControl="name" placeholder="Username">
                 <span class="input-group-addon" id="basic-addon2">@mailwall.me</span>
                 <span class="input-group-btn">
             <button class="btn btn-default" type="button">Verify</button>
@@ -28,7 +29,7 @@
 
             <div class="form-group">
                 <label>Password:</label>
-                <input type="password" class="form-control" name="password" value="" placeholde="Password">
+                <input type="password" class="form-control" ngControl="password" placeholder="Password">
             </div>
 
         </div>

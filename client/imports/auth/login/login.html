@@ -1,6 +1,6 @@
 <div class="page">
     <div class="form-box">
-        <form class="" action="" method="post">
+        <form [ngFormModel]="loginForm" #f="ngForm" (submit)="login(f.value)">
 
             <div class="header dev">
                 <center>
@@ -8,15 +8,15 @@
                 </center>
             </div>
             <div class="body bg-gray">
-                <ul>
-                    <li class="red-text">error</li>
+                <ul [hidden]="error == ''">
+                    <li class="red-text">{{ error }}</li>
                 </ul>
                 <div class="input-group">
-                    <input type="text" class="form-control" name="name" value="" placeholder="Username">
+                    <input type="text" class="form-control" ngControl="name" placeholder="Username">
                     <span class="input-group-addon" id="basic-addon2">@mailwall.me</span>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="password" value="" placeholder="Password">
+                    <input type="password" class="form-control" ngControl="password" placeholder="Password">
                 </div>
             </div>
 
@@ -25,5 +25,6 @@
             </div>
 
         </form>
+
     </div>
 </div>

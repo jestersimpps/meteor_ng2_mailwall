@@ -20,6 +20,7 @@ export class wallposts {
 
 
     constructor() {
+        
         this.posts = Posts.find({}, { sort: { sorter: 1 } });
         this.posts.observeChanges({
             added: function (newDoc) {
